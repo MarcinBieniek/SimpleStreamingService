@@ -106,8 +106,37 @@
     <h3>Project created by Marcin Bieniek / All rights reserved</h3>
   </footer>
 
+  <!-- handlebars sripts below -->
 
+  <!-- Song  -->
+  <script id="single-song-widget" type="text/x-handlebars-template">
+    <div class="container container__song">
+      <div class="song">
+        <div class="song__content">
 
+          <h2 class="song__header">{{author}} - {{title}}</h2>
+
+          <div class="player">
+            <audio>
+              <source src="songs/{{ songName }}"  type="audio/mpeg">
+            </audio>
+          </div>
+
+          <div class="song__descritpion">
+            <p class="song__descritpion__category">Categories: {{categories}}</p>
+            <p class="song__description__rank">#{{ranking}} in the ranking</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="song__cover">
+        <img src="images/covers/{{cover}}">
+      </div>
+    </div>
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
 
 </body>
 </html>
