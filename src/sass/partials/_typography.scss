@@ -1,0 +1,19 @@
+/* Typography */
+
+.h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.h2{
+  font-size: 36px;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: $font-semibold;
+}
+
+.a{
+  color: $color-white;
+  text-decoration: none;
+}

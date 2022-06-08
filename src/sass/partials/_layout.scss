@@ -1,0 +1,23 @@
+/* Global */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: $color-black;
+  font-family: $font-text;
+  font-size: 14px;
+  font-weight: $font-regular;
+  color: $color-white;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+/* here post grid classes if necessary */

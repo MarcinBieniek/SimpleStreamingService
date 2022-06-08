@@ -1,0 +1,19 @@
+/* Global */
+
+.button{
+  background-color: $color-red;
+  border: none;
+  height: 80px;
+  width: 200px;
+  border-radius: 5px;
+  color: $color-white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: 1s;
+
+  &:hover{
+    background-color: $color-white;
+    color: $color-red;
+  }
+}
