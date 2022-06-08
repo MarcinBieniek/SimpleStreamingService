@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Music Service</title>
+  <title>Streaming Service</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
   <link rel="stylesheet" href="https://use.typekit.net/nep2mxg.css">
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
@@ -28,6 +28,85 @@
     <a href="#search" class="a navigation__button search__nav">Search</a>
     <a href="#discover" class="a navigation__button discover__nav">Discover</a>
   </nav>  
+
+  <!-- Pages -->
+  <div id="pages">
+
+    <section id="home" class="active page home">
+      <div id="home-page" class="container">
+        <button id="powerfull" class="home__categoryBtn--powerfull">Powerfull</button>
+        <button id="relax" class="home__categoryBtn--relax">Relax</button>
+        <button id="fun" class="home__categoryBtn--fun">Fun</button>
+        <button id="mystery" class="home__categoryBtn--mystery">Mystery</button>
+
+        <!-- Div for songs -->
+
+      </div>
+
+      <section class="subscription">
+        <div class="subsription__wrapper">
+          <img src="images/subscribe.jpg" alt="Subscritpion" title="Subscritpion">
+          <h2 class="h2 subscritpion__header__subscribe">Subscribe
+            <span class="subscritpion__header__subscribe--now"> Now</span>
+          </h2>
+          <div class="subscription__box">
+            <!-- button -->
+            <button class="button subscription__box__button">Join Now</button>
+            <!-- album cover -->
+            <img src="images/artist.jpg" alt="Artist" title="Dean Henson">
+            <!-- artist name -->
+            <h2 class="h2 subscription__header__name">Dean</h2>
+              <h2 class="subscription__header__name--hen">Hen</span><span class="subscription__header__nam--son">son</span></h2>
+            </h2>
+            <!-- new album info -->
+            <h3 class="h3 subscription__header_newalbum">New album</h3>
+            <h3 class="h3 subscription__header_avalaible">Avalaible for subscribers</h3>
+          </div>
+        </div>
+      </section>
+    </section>
+
+
+    <section id="search" class="page search">
+      <div id="search-page" class="container ">
+
+          <h3 class="search__header">Search</h3>
+          <div class="search__box">
+            <label for="search">Name</label>
+            <input type="text" id="search" class="search__input">
+            <button class="button search__button">Search</button>
+          </div>
+          <h3 class="search__result">We have found<span class="search___number"> ...</span><span class="search__wordSong"> songs.</span></h3>
+          <div class="search__wrapper">
+
+            <!-- Div for songs -->
+
+          </div>
+      </div>
+    </section>
+
+    <section id="discover" class="page discover__container">
+      <div id="discover-page" class="container discover">
+        <h3 class="discover__header">Discover</h3>
+        <h3 class="discover__result">Pick a song you may love!</h3>
+      </div>
+      <div class="discover__wrapper">
+
+        <!-- Div for songs -->
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <!-- Footer -->
+  <footer>
+    <h3>Project created by Marcin Bieniek / All rights reserved</h3>
+  </footer>
+
+
 
 
 </body>
