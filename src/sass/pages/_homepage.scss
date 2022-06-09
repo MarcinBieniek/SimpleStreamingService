@@ -264,3 +264,106 @@ footer{
     color: $color-grey;
   }
 }
+
+/* 2nd site - Search */
+/* Search input */
+
+.search{
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+
+  .search__header{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: $font-semibold;
+    letter-spacing: 5px;
+    color: $color-grey;
+  }
+
+  .search__box{
+    height: 50px;
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    label{
+      font-size: 16px;
+      font-weight: $font-regular;
+      text-transform: none;
+      color: $color-white;
+      letter-spacing: 2px;
+    }
+
+    input{
+      border-radius: 5px;
+      border: none;
+      height: 32px;
+      width: 40%;
+    }
+
+    button{
+      height: 32px;
+      padding-top: 2px;
+    }
+  }
+
+  .search__result{
+    font-size: 16px;
+    font-weight: $font-regular;
+    text-transform: none;
+    color: $color-white;
+    letter-spacing: 5px;
+    padding: 30px 0px;
+
+  }
+
+  .search__wrapper{
+    height: 100%;
+    width: 100%;
+    padding: 30px 0px;
+  }
+}
+
+/* 3rd site - Discover */
+/* Discover */
+
+.discover__container{
+  margin-bottom: 80px;
+
+  .discover{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding-bottom: 180px;
+
+    .discover__header{
+      text-transform: uppercase;
+      font-size: 30px;
+      font-weight: $font-semibold;
+      letter-spacing: 5px;
+      color: $color-grey;
+      width: 100%;
+    }
+
+    .discover__result{
+      font-size: 16px;
+      font-weight: $font-regular;
+      text-transform: none;
+      color: $color-white;
+      letter-spacing: 5px;
+      margin: 30px 0px;
+    }
+  }
+
+}
