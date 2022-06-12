@@ -79,6 +79,7 @@ fetch(url)
   })
   .then(function(parsedResponse){
     for(let singleSong of parsedResponse){
+      searchData.push(singleSong);
       const songId = singleSong.id;
       const songTitle = singleSong.title;
       const songName = singleSong.filename;
@@ -147,3 +148,104 @@ function getRandomItem(arr) {
     })
   
   };
+
+  /* [DONE] 3. Search function */
+
+const searchData = [];
+
+const searchInput = document.querySelector(select.element.searchInput);
+
+/* Filter search data */
+
+const searchSong = function(){
+  let inputValue = searchInput.value;
+  let filteredSongs = searchData.filter(keyWord => keyWord.filename.toLowerCase().includes(inputValue.toLowerCase()));
+
+  if (filteredSongs.length == 0) {
+    alert('Song not found');
+  }
+
+  /* Preparing song template */
+
+  const prepareTemplate = function(id, author, title, categories, ranking, songName, cover){
+    const generatedData = {id: id, author: author, title: title, categories: categories, ranking: ranking, songName: songName, cover: cover}
+
+    const pushGeneratedData = templates.player(generatedData);
+    document.querySelector(select.containerOf.search).innerHTML += pushGeneratedData;
+
+    /* Display options */
+
+    document.querySelector(select.containerOf.searchResult).style.display = 'block';
+
+    document.querySelector(select.containerOf.resultValue).innerHTML = ' '+ filteredSongs.length;
+
+    let wordSong;
+
+    if (filteredSongs.length > 1) {
+      wordSong = ' songs.';
+    } else if (filteredSongs.length == 1) {
+      wordSong = ' song.';
+    } else if (filteredSongs.lengt < 1) {
+      wordSong = ' songs.';
+    }
+
+    document.querySelector(select.containerOf.wordSong).innerHTML = wordSong;
+  };
+
+  document.querySelector(select.containerOf.search).innerHTML = '';
+  document.querySelector(select.element.searchInput).value = '';
+
+  for (let filterSong of filteredSongs) {
+
+      const songId = filterSong.id;
+      const songTitle = filterSong.title;
+      const songName = filterSong.filename;
+      const songCategories = filterSong.categories;
+      const songRanking = filterSong.ranking;
+      const songFilename = filterSong.filename.toLowerCase();
+      const songCover = filterSong.cover;
+
+    // [DONE] Creating correct author name
+
+      const authorAndTitle = songFilename.replaceAll('_', ' ').replace('.mp3', '').replace('-', ' ');
+      const songTitleLowerCase = songTitle.toLowerCase();
+      const authorNameLowerCase = authorAndTitle.split(songTitleLowerCase).join('').trim().split(" ");
+      const firstName = authorNameLowerCase[0];
+      const authorNameUpperCase = firstName[0].toUpperCase() + firstName.slice(1);
+      const secondName = authorNameLowerCase[1];
+      const authorSurameUpperCase = secondName[0].toUpperCase() + secondName.slice(1);
+      const authorName = authorNameUpperCase + ' ' + authorSurameUpperCase;
+
+      prepareTemplate(songId, authorName, songTitle, songCategories, songRanking, songName, songCover)
+  }
+
+  GreenAudioPlayer.init({
+    selector: '.search__wrapper .player', // inits Green Audio Player on each audio container that has class "player"
+    stopOthersOnPlay: true
+  });
+
+};
+
+const searchMenuButton = document.querySelector('.search__nav');
+
+searchMenuButton.addEventListener('click', function(){
+  document.querySelector(select.containerOf.search).innerHTML = '';
+  document.querySelector(select.containerOf.resultValue).innerHTML = ' ... ';
+  document.querySelector(select.containerOf.wordSong).innerHTML = 'songs.';
+})
+
+const searchButton = document.querySelector(select.element.searchButton);
+
+searchButton.addEventListener('click', function(){
+  if(document.querySelector(select.element.searchInput).value != ''){
+    searchSong();
+  }else
+  document.querySelector(select.containerOf.resultValue).innerHTML = ' 0 ';
+})
+
+/* [IN PROGRESS] To do list:
+  - Categories on main site,
+  - Correct search section
+  - Export files
+  - Publicate web on heroku
+*/
