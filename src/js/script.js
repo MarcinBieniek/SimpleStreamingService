@@ -119,5 +119,31 @@ const prepareTemplate = function(id, author, title, categories, ranking, songNam
   const pushGeneratedData = templates.player(generatedData);
 document.getElementById(select.containerOf.homeAudioPlayer).innerHTML += pushGeneratedData;
 
+dataArray.push(pushGeneratedData);
 
-dataArray.push(pushGeneratedData)};
+/* [DONE] 3. Discover music */
+
+function getRandomItem(arr) {
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    const item = arr[randomIndex];
+    return item;
+  }
+  
+  const discoverLink = document.querySelector(select.nav.discover);
+  
+  discoverLink.addEventListener('click', function(){
+  
+    let randomSong = getRandomItem(dataArray);
+  
+    document.querySelector(select.containerOf.discover).innerHTML = '';
+  
+    document.querySelector(select.containerOf.discover).innerHTML = randomSong;
+  
+      GreenAudioPlayer.init({
+        selector: '.discover__wrapper .player',
+        stopOthersOnPlay: true
+      });
+  
+    })
+  
+  };
