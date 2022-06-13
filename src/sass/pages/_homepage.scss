@@ -367,3 +367,927 @@ footer{
   }
 
 }
+
+/* --- Media queries --- */
+
+/* Super small screens (phones, max 390px )*/
+@media only screen and (max-width: 390px){
+
+  /* Hero */
+
+  .hero{
+    img{
+      height: 50vh;
+    }
+    .hero__text{
+      .h1--hero{
+        letter-spacing: 30px;
+      }
+      .h2--hero{
+        line-height: 1.5;
+      }
+    }
+  }
+
+  /* Home container */
+
+  .home {
+    .container{
+      padding-left: 5px;
+      translate: 1s;
+    }
+  }
+
+  /* Song container */
+
+  .container__song{
+    display: block;
+    .song__cover{
+      display: none;
+    }
+  }
+
+  /* Search */
+
+  .search{
+    .search__box {
+      flex-direction: column;
+    }
+    .search__input{
+      margin: 10px 0px;
+    }
+  }
+
+  /* Subscription */
+
+  .subscription{
+    img{
+      height: 75vh;
+    }
+    .subscritpion__header__subscribe{
+      font-size: 24px;
+      top: -14px;
+      left: 40px;
+    }
+    .subscription__box{
+      width: 300px;
+      top: 50px;
+      left: 35px;
+      .subscription__box__button{
+        top: 330px;
+        left: 65px;
+      }
+      img{
+        height: 250px;
+        width: 200px;
+      }
+      .subscription__header__name{
+        font-size: 30px;
+        top: 50px;
+        left: 5px;
+        transition: 1s;
+      }
+      .subscription__header__name--hen{
+        font-size: 30px;
+        z-index: 1;
+        letter-spacing: 8px;
+        left: 25px;
+        top: 60px;
+        transition: 1s;
+      }
+      .subscription__header_newalbum{
+        top: 230px;
+        z-index: 1;
+        color: $color-white;
+      }
+
+      .subscription__header_avalaible{
+        font-size: 16px;
+        left: 148px;
+        top: 260px;
+        z-index: 1;
+      }
+    }
+  }
+
+  .button{
+    height: 50px;
+    width: 170px;
+    z-index: 2;
+  }
+
+
+}
+
+/* Super small screens (phones, 320px and up)*/
+@media only screen and (min-width: 390px){
+
+/* Hero */
+
+.hero{
+  img{
+    height: 50vh;
+  }
+  .hero__text{
+    .h1--hero{
+      letter-spacing: 30px;
+    }
+    .h2--hero{
+      line-height: 1.5;
+    }
+  }
+}
+
+/* Home container */
+
+.home {
+  .container{
+    padding-left: 5px;
+    translate: 1s;
+  }
+}
+
+/* Song container */
+
+.container__song{
+  display: block;
+  .song__cover{
+    display: none;
+  }
+
+}
+
+/* Search */
+
+.search{
+  .search__box {
+    flex-direction: column;
+  }
+  .search__input{
+    margin: 10px 0px;
+  }
+}
+
+/* Subscription */
+
+.subscription{
+
+  img{
+    height: 75vh;
+  }
+  .subscritpion__header__subscribe{
+    font-size: 24px;
+    top: -14px;
+    left: 40px;
+  }
+  .subscritpion__header__subscribe--now{
+    display: visible;
+  }
+  .subscription__box{
+    width: 300px;
+    top: 50px;
+    left: 45px;
+    .subscription__box__button{
+      top: 330px;
+      left: 65px;
+    }
+    img{
+      height: 250px;
+      width: 200px;
+    }
+    .subscription__header__name{
+      font-size: 30px;
+      top: 50px;
+      left: 5px;
+      transition: 1s;
+    }
+    .subscription__header__name--hen{
+      font-size: 30px;
+      z-index: 1;
+      left: 25px;
+      top: 60px;
+      transition: 1s;
+    }
+    .subscription__header_newalbum{
+      font-size: 22px;
+      right: 0px;
+      top: 230px;
+      z-index: 1;
+      color: $color-white;
+    }
+    .subscription__header_avalaible{
+      font-size: 16px;
+      left: 148px;
+      top: 260px;
+      z-index: 1;
+    }
+  }
+}
+.button{
+  height: 50px;
+  width: 170px;
+  z-index: 2;
+}
+
+}
+
+/* Extra small devices (ipads, tablets, 481px and down) */
+@media only screen and (min-width: 481px) {
+
+    /* [DONE] Media queries for website size min 481 */
+
+    /* Hero */
+
+    .hero{
+
+      img{
+        height: 85vh;
+      }
+      .hero__text{
+        .h1--hero{
+          letter-spacing: 50px;
+        }
+        .h2--hero{
+          line-height: 2;
+        }
+      }
+    }
+
+    /* Home container */
+
+    .home {
+
+      .container{
+        padding-left: 5px;
+        translate: 1s;
+      }
+    }
+
+    /* Song container */
+
+    .container__song{
+      display: flex;
+      .song{
+        flex: 2;
+      }
+
+      .song__cover{
+        display: flex;
+      }
+    }
+
+    /* Search */
+
+    .search{
+      .search__box {
+        flex-direction: row;
+      }
+    }
+
+    /* Subscription */
+
+    .subscription{
+
+      img{
+        height: 85vh;
+      }
+
+      .subscritpion__header__subscribe{
+        font-size: 30px;
+        letter-spacing: 12px;
+        top: -16px;
+        left: 60px;
+      }
+
+      .subscription__box{
+        height: 400px;
+        width: 400px;
+        top: 80px;
+        left: 45px;
+
+        .subscription__box__button{
+          top: 190px;
+          left: 0px;
+        }
+
+        .subscription__header__name{
+          font-size: 50px;
+          top: 50px;
+          left: 55px;
+        }
+
+        .subscription__header__name--hen{
+          font-size: 50px;
+          left: 90px;
+          top: 60px;
+        }
+
+        .subscription__header_newalbum{
+          right: 0px;
+          top: 300px;
+        }
+
+        .subscription__header_avalaible{
+          left: 106px;
+          top: 330px;
+        }
+      }
+    }
+
+    .button{
+      height: 60px;
+      width: 170px;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  /* Media queries for website size 600 - DONE */
+
+  /* Song container */
+
+    .container__song{
+
+      .song{
+        flex: 3.2;
+      }
+    }
+
+  /* Subscription */
+
+  .subscription{
+
+    .subscritpion__header__subscribe{
+      font-size: 40px;
+      letter-spacing: 12px;
+      top: -22px;
+      left: 80px;
+    }
+
+    .subscription__box{
+      height: 400px;
+      width: 550px;
+      top: 80px;
+      left: 25px;
+
+      .subscription__header__name{
+        top: 150px;
+        left: 210px;
+      }
+
+      .subscription__header__name--hen{
+        left: 240px;
+        top: 160px;
+      }
+
+      .subscription__header_newalbum{
+        right: 0px;
+        top: 300px;
+      }
+
+      .subscription__header_avalaible{
+        left: 213px;
+        top: 330px;
+      }
+    }
+  }
+
+  .button{
+    height: 60px;
+    width: 170px;
+  }
+
+}
+
+/* --- Media queries --- */
+
+/* Super small screens (phones, max 390px )*/
+@media only screen and (max-width: 390px){
+
+  /* Hero */
+
+  .hero{
+    img{
+      height: 50vh;
+    }
+    .hero__text{
+      .h1--hero{
+        letter-spacing: 30px;
+      }
+      .h2--hero{
+        line-height: 1.5;
+      }
+    }
+  }
+
+  /* Home container */
+
+  .home {
+    .container{
+      padding-left: 5px;
+      translate: 1s;
+    }
+  }
+
+  /* Song container */
+
+  .container__song{
+    display: block;
+    .song__cover{
+      display: none;
+    }
+  }
+
+  /* Search */
+
+  .search{
+    .search__box {
+      flex-direction: column;
+    }
+    .search__input{
+      margin: 10px 0px;
+    }
+  }
+
+  /* Subscription */
+
+  .subscription{
+    img{
+      height: 75vh;
+    }
+    .subscritpion__header__subscribe{
+      font-size: 24px;
+      top: -14px;
+      left: 40px;
+    }
+    .subscription__box{
+      width: 300px;
+      top: 50px;
+      left: 35px;
+      .subscription__box__button{
+        top: 330px;
+        left: 65px;
+      }
+      img{
+        height: 250px;
+        width: 200px;
+      }
+      .subscription__header__name{
+        font-size: 30px;
+        top: 50px;
+        left: 5px;
+        transition: 1s;
+      }
+      .subscription__header__name--hen{
+        font-size: 30px;
+        z-index: 1;
+        letter-spacing: 8px;
+        left: 25px;
+        top: 60px;
+        transition: 1s;
+      }
+      .subscription__header_newalbum{
+        top: 230px;
+        z-index: 1;
+        color: $color-white;
+      }
+
+      .subscription__header_avalaible{
+        font-size: 16px;
+        left: 148px;
+        top: 260px;
+        z-index: 1;
+      }
+    }
+  }
+
+  .button{
+    height: 50px;
+    width: 170px;
+    z-index: 2;
+  }
+
+
+}
+
+/* Super small screens (phones, 320px and up)*/
+@media only screen and (min-width: 390px){
+
+/* Hero */
+
+.hero{
+  img{
+    height: 50vh;
+  }
+  .hero__text{
+    .h1--hero{
+      letter-spacing: 30px;
+    }
+    .h2--hero{
+      line-height: 1.5;
+    }
+  }
+}
+
+/* Home container */
+
+.home {
+  .container{
+    padding-left: 5px;
+    translate: 1s;
+  }
+}
+
+/* Song container */
+
+.container__song{
+  display: block;
+  .song__cover{
+    display: none;
+  }
+
+}
+
+/* Search */
+
+.search{
+  .search__box {
+    flex-direction: column;
+  }
+  .search__input{
+    margin: 10px 0px;
+  }
+}
+
+/* Subscription */
+
+.subscription{
+
+  img{
+    height: 75vh;
+  }
+  .subscritpion__header__subscribe{
+    font-size: 24px;
+    top: -14px;
+    left: 40px;
+  }
+  .subscritpion__header__subscribe--now{
+    display: visible;
+  }
+  .subscription__box{
+    width: 300px;
+    top: 50px;
+    left: 45px;
+    .subscription__box__button{
+      top: 330px;
+      left: 65px;
+    }
+    img{
+      height: 250px;
+      width: 200px;
+    }
+    .subscription__header__name{
+      font-size: 30px;
+      top: 50px;
+      left: 5px;
+      transition: 1s;
+    }
+    .subscription__header__name--hen{
+      font-size: 30px;
+      z-index: 1;
+      left: 25px;
+      top: 60px;
+      transition: 1s;
+    }
+    .subscription__header_newalbum{
+      font-size: 22px;
+      right: 0px;
+      top: 230px;
+      z-index: 1;
+      color: $color-white;
+    }
+    .subscription__header_avalaible{
+      font-size: 16px;
+      left: 148px;
+      top: 260px;
+      z-index: 1;
+    }
+  }
+}
+.button{
+  height: 50px;
+  width: 170px;
+  z-index: 2;
+}
+
+}
+
+/* Extra small devices (ipads, tablets, 481px and down) */
+@media only screen and (min-width: 481px) {
+
+    /* [DONE] Media queries for website size min 481 */
+
+    /* Hero */
+
+    .hero{
+
+      img{
+        height: 85vh;
+      }
+      .hero__text{
+        .h1--hero{
+          letter-spacing: 50px;
+        }
+        .h2--hero{
+          line-height: 2;
+        }
+      }
+    }
+
+    /* Home container */
+
+    .home {
+
+      .container{
+        padding-left: 5px;
+        translate: 1s;
+      }
+    }
+
+    /* Song container */
+
+    .container__song{
+      display: flex;
+      .song{
+        flex: 2;
+      }
+
+      .song__cover{
+        display: flex;
+      }
+    }
+
+    /* Search */
+
+    .search{
+      .search__box {
+        flex-direction: row;
+      }
+    }
+
+    /* Subscription */
+
+    .subscription{
+
+      img{
+        height: 85vh;
+      }
+
+      .subscritpion__header__subscribe{
+        font-size: 30px;
+        letter-spacing: 12px;
+        top: -16px;
+        left: 60px;
+      }
+
+      .subscription__box{
+        height: 400px;
+        width: 400px;
+        top: 80px;
+        left: 45px;
+
+        .subscription__box__button{
+          top: 190px;
+          left: 0px;
+        }
+
+        .subscription__header__name{
+          font-size: 50px;
+          top: 50px;
+          left: 55px;
+        }
+
+        .subscription__header__name--hen{
+          font-size: 50px;
+          left: 90px;
+          top: 60px;
+        }
+
+        .subscription__header_newalbum{
+          right: 0px;
+          top: 300px;
+        }
+
+        .subscription__header_avalaible{
+          left: 106px;
+          top: 330px;
+        }
+      }
+    }
+
+    .button{
+      height: 60px;
+      width: 170px;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  /* Media queries for website size 600 - DONE */
+
+  /* Song container */
+
+    .container__song{
+
+      .song{
+        flex: 3.2;
+      }
+    }
+
+  /* Subscription */
+
+  .subscription{
+
+    .subscritpion__header__subscribe{
+      font-size: 40px;
+      letter-spacing: 12px;
+      top: -22px;
+      left: 80px;
+    }
+
+    .subscription__box{
+      height: 400px;
+      width: 550px;
+      top: 80px;
+      left: 25px;
+
+      .subscription__header__name{
+        top: 150px;
+        left: 210px;
+      }
+
+      .subscription__header__name--hen{
+        left: 240px;
+        top: 160px;
+      }
+
+      .subscription__header_newalbum{
+        right: 0px;
+        top: 300px;
+      }
+
+      .subscription__header_avalaible{
+        left: 213px;
+        top: 330px;
+      }
+    }
+  }
+
+  .button{
+    height: 60px;
+    width: 170px;
+  }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+/* Media queries for website size 768 - DONE */
+/* Subscription */
+
+.subscription{
+
+  .subscritpion__header__subscribe{
+    font-size: 50px;
+    letter-spacing: 12px;
+    top: -28px;
+    left: 140px;
+    transition: 1s;
+  }
+
+  .subscription__box{
+    width: 600px;
+    top: 80px;
+    left: 90px;
+
+    .subscription__box__button{
+      top: 200px;
+    }
+
+    .subscription__header__name{
+      top: 150px;
+      left: 260px;
+    }
+
+    .subscription__header__name--hen{
+      left: 290px;
+      top: 160px;
+    }
+
+    .subscription__header_newalbum{
+      right: 0px;
+      top: 300px;
+    }
+
+    .subscription__header_avalaible{
+      left: 264px;
+      top: 330px;
+    }
+  }
+}
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+/* Media queries for website size 992 - DONE */
+/* Subscription */
+
+.subscription{
+
+  .subscritpion__header__subscribe{
+    font-size: 68px;
+    top: -40px;
+    left: 200px;
+  }
+
+  .subscription__box{
+    top: 80px;
+    left: 220px;
+
+    img{
+      height: 300px;
+      width: 200px;
+    }
+
+    .subscription__header__name{
+      top: 150px;
+      left: 260px;
+    }
+
+    .subscription__header__name--hen{
+      left: 290px;
+      top: 160px;
+    }
+
+    .subscription__header_newalbum{
+      right: 0px;
+      top: 300px;
+    }
+
+    .subscription__header_avalaible{
+      left: 264px;
+      top: 330px;
+    }
+  }
+}
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+/* Media queries for website size 1200 - DONE */
+/* Subscription */
+
+.subscription{
+
+  .subscritpion__header__subscribe{
+    top: -40px;
+    left: 280px;
+  }
+
+  .subscription__box{
+    top: 80px;
+    left: 300px;
+
+    .subscription__header__name{
+      top: 150px;
+      left: 260px;
+    }
+
+    .subscription__header__name--hen{
+      left: 290px;
+      top: 160px;
+    }
+
+    .subscription__header_newalbum{
+      top: 300px;
+    }
+
+    .subscription__header_avalaible{
+      top: 330px;
+      right: 0px;
+    }
+  }
+}
+
+}
+
+

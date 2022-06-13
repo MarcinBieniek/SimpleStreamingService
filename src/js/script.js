@@ -237,6 +237,7 @@ searchMenuButton.addEventListener('click', function(){
 const searchButton = document.querySelector(select.element.searchButton);
 
 searchButton.addEventListener('click', function(){
+  document.querySelector(select.containerOf.search).innerHTML = '';
   if(document.querySelector(select.element.searchInput).value != ''){
     searchSong();
   }else
