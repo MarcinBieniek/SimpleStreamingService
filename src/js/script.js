@@ -1,12 +1,14 @@
 const select = {
     containerOf: {
-      pages: '.page', //
+      pages: '.page', 
       homeAudioPlayer: 'home-page',
       discover: '.discover__wrapper',
       search: '.search__wrapper',
+      blog:'.blog',
       searchResult: '.search__result',
       resultValue: '.search___number',
       wordSong: '.search__wordSong',
+      song: '.container__song',
     },
     templateOf: {
       oneSong: '#single-song-widget',
@@ -47,11 +49,11 @@ const select = {
   /* [DONE] 1. Activate page */
   
   const allNavButtons = document.querySelectorAll(select.nav.links);
-  
+
   for(let pageButton of allNavButtons){
     pageButton.addEventListener('click', function(event) {
   
-      event.preventDefault()
+      event.preventDefault();
       const clickedElement = this;
       const id = clickedElement.getAttribute('href').replace('#', '');
   
@@ -101,7 +103,7 @@ fetch(url)
 
       /* Creating single song HTML object */
       prepareTemplate(songId, authorName, songTitle, songCategories, songRanking, songName, songCover)
-
+      
     }
   })
   .then(function () {
@@ -149,7 +151,7 @@ function getRandomItem(arr) {
   
   };
 
-  /* [DONE] 3. Search function */
+/* [DONE] 4. Search function */
 
 const searchData = [];
 
@@ -244,9 +246,38 @@ searchButton.addEventListener('click', function(){
   document.querySelector(select.containerOf.resultValue).innerHTML = ' 0 ';
 })
 
+/* 5. TAGS */
+
+const tagClickHandler = function(event){
+  event.preventDefault();
+  console.log('Link was clicked!');
+}
+
+const tagButtons = document.querySelectorAll('.home a')
+
+console.log('tagButtons', tagButtons)
+
+for(let tagButton of tagButtons){
+
+  const tagInnerHTML = tagButton.innerHTML
+  console.log(tagInnerHTML)
+
+  tagButton.addEventListener('click', tagClickHandler)
+ 
+}
+
+/*
+const titleClickHandler = function(){
+  console.log('Link was clicked!');
+}
+
+for(let tagButton of tagButtons){
+  tagButton.addEventListener('click', titleClickHandler());
+}
+*/
+
 /* [IN PROGRESS] To do list:
   - Categories on main site,
   - Correct search section
   - Export files
-  - Publicate web on heroku
 */

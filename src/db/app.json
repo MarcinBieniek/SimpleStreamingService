@@ -5,7 +5,10 @@
             "title": "At The Top",
             "author": 1,
             "filename": "At_The_Top_David_Renda.mp3",
-            "categories": ["Powerful", "Mystery"],
+            "categories": [
+                {"url": "powerful", "test": true, "title": "powerful"},
+                {"url": "relax", "test": true, "title": "relax"}
+            ],  
             "ranking": 1,
             "cover": "1.jpg"
         },
@@ -14,7 +17,10 @@
             "title": "Silly Feet",
             "author": 1,
             "filename": "Silly_Feet_David_Renda.mp3",
-            "categories": ["Relax", "Fun"],
+            "categories": [
+                {"url": "relax", "test": true, "title": "relax"},
+                {"url": "fun", "test": true, "title": "fun"}
+            ],
             "ranking": 2,
             "cover": "2.jpg"
         },
@@ -23,7 +29,10 @@
             "title": "Western adventures",
             "author": 2,
             "filename": "Western_Adventures_-_David_Fesliyan.mp3",
-            "categories": ["Fun", "Western"],
+            "categories": [
+                {"url": "mystery", "test": true, "title": "mystery"},
+                {"url": "powerfull", "test": true, "title": "powerfull"}
+            ],
             "ranking": 4,
             "cover": "3.jpg"
         },
@@ -32,7 +41,10 @@
             "title": "Bass trap",
             "author": 3,
             "filename": "BASS_TRAP_Steve_Oxen.mp3",
-            "categories": ["Powerful", "Insomnia"],
+            "categories": [
+                {"url": "relax", "test": true, "title": "relax"},
+                {"url": "fun", "test": true, "title": "fun"}
+            ],
             "ranking": 3,
             "cover": "4.jpg"
         }

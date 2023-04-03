@@ -35,14 +35,9 @@
     <section id="home" class="active page home">
       <div id="home-page" class="container">
         
-        <!-- [IN PROGRESS]
-        <button id="powerfull" class="home__categoryBtn--powerfull">Powerfull</button>
-        <button id="relax" class="home__categoryBtn--relax">Relax</button>
-        <button id="fun" class="home__categoryBtn--fun">Fun</button>
-        <button id="mystery" class="home__categoryBtn--mystery">Mystery</button>
-        -->    
 
-        <!-- Div for songs -->
+
+      <!-- Div for songs -->
 
       </div>
 
@@ -98,6 +93,13 @@
         <!-- Div for songs -->
 
       </div>
+    </section>
+
+    <section id="blog" class="page">
+      <div id=blog-page" class="container">
+        <h3>Blog</h3>
+        <h3>Pick a song you may love!</h3>
+      </div>
 
     </section>
 
@@ -126,8 +128,21 @@
           </div>
 
           <div class="song__descritpion">
-            <p class="song__descritpion__category">Categories: {{categories}}</p>
-            <p class="song__description__rank">#{{ranking}} in the ranking</p>
+            <div class="song__description__left">
+              <p class="song__descritpion__categories">Categories:</p>                
+                {{#each categories}}
+                  <a class="song__description__tag" id="tag" href="#tag-{{url}}">
+                    {{#if test}}
+                      {{title}}
+                    {{^}}
+                      Empty
+                    {{/if}}  
+                  </a>
+                {{~/each}}
+            </div>
+            <div>
+              <p class="song__description__rank">#{{ranking}} in the ranking</p>
+            </div>
           </div>
 
         </div>
