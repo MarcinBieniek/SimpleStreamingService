@@ -6,7 +6,7 @@ Simple streaming service developed in Vanilla JavaScript. First of Kodilla Bootc
 
 ## Demo
 
-Live demo: [simple-streaming-service.herokuapp.com](https://simple-streaming-service.herokuapp.com/)
+Live demo: [streaming-service.herokuapp.com](https://streaming-service.herokuapp.com/)
 
 Thank You for taking Your time and checking out my project.
 
