@@ -6,7 +6,7 @@ Simple streaming service developed in Vanilla JavaScript. First of Kodilla Bootc
 
 ## Demo
 
-Live demo: [simple-streaming-service.herokuapp.com/](https://simple-streaming-service.herokuapp.com/)
+Live demo: [simple-streaming-service.herokuapp.com](https://simple-streaming-service.herokuapp.com/)
 
 Thank You for taking Your time and checking out my project.
 
@@ -30,5 +30,5 @@ $ npm run build
 
 Author - [Marcin Bieniek](https://www.linkedin.com/in/marcin-bieniek-617565271/)
 
-Portfolio - [marcindev.netlify.app/](https://marcindev.netlify.app/)
+Portfolio - [marcindev.netlify.app](https://marcindev.netlify.app/)
 
